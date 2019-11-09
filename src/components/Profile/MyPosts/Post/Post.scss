@@ -1,0 +1,14 @@
+.post {
+    margin: 15px;
+
+    .item {
+        border: 1px solid rgb(1,121,51);
+        margin: 10px;
+        padding: 5px;
+
+        img {
+            width: 50px;
+            border-radius: 30px;
+        }
+    }
+}
