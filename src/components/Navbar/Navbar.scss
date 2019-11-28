@@ -1,33 +1,41 @@
 .nav {
     grid-area: n;
-    background-color: #fff;
 
     .menu {
-        margin: 20px;
+        margin: 20px 20px 20px 0px;
+        position: fixed;
 
-        .item {
-            color: rgb(255, 255, 255);
-            margin-top: 10px;
-            padding: 5px;
+        div {
+            width: 70%;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        a {
+            width: 100%;
+            color: #787878;
+            text-decoration: none;
+            margin-top: 30px;
+            padding: 5px 50px 5px 10px;
             border-radius: 3px;
             transition-duration: .5s;
 
-            a {
-                color: #777777;
-                text-decoration: none;
-            }
-
-            .active {
-                color: #007bff;
-            }
-
             &:hover {
                 cursor: pointer;
+                background-color: #00858C;
+                color: #fff;
             }
         }
-    }
-}
 
-.gold {
-    color: gold;
+        .active {
+            color: #fff;
+            background-color: #00858C;
+        }
+    }
 }

@@ -1,42 +1,27 @@
 import React from 'react'
 import './Dialogs.scss'
-import { NavLink } from 'react-router-dom'
+import DialogItem from './DialogItem/DialogItem'
+import Message from './Message/Message'
 
-const DialogItem = props => {
+const Dialogs = props => {
 
-    let path = "/dialogs/" + props.id;
+    let dialogsElements = props.dialogs
+        .map(d => <DialogItem name={d.name} id={d.id} />)
 
-    return (
-        <div className="dialog">
-            <NavLink to={path}>{props.name}</NavLink>
-        </div>
-    )
-}
+    let messagesElements = props.messages
+        .map(m => <Message text={m.message} />)
 
-const Message = props => {
-
-    let message = props.text
-
-    return <div className="message">{message}</div>
-}
-
-const Dialogs = () => {
     return (
         <div className="dialogs">
             <div className="dialogs-items">
 
-                <DialogItem name="Denis" id="1" />
-                <DialogItem name="Artem" id="2" />
-                <DialogItem name="Tanya" id="3" />
-                <DialogItem name="Yaroslav" id="4" />
-                <DialogItem name="Rostyslav" id="5" />
-                <DialogItem name="Sveta" id="6" />
+                {dialogsElements}
 
             </div>
             <div className="dialogs-messages">
-                <Message text="Hi" />
-                <Message text="How R U?" />
-                <Message text="Yeah" />
+
+                {messagesElements}
+
             </div>
         </div>
     )

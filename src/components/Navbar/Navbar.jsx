@@ -5,23 +5,23 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
     return (
         <nav className="nav">
-            <ul className="list menu">
-                <li className="item">
-                    <NavLink to="/profile">Profile</NavLink>
-                </li>
-                <li className="item">
-                    <NavLink to="/dialogs">Messages</NavLink>
-                </li>
-                <li className="item">
-                    <NavLink to="/news">News</NavLink>
-                </li>
-                <li className="item">
-                    <NavLink to="/music">Music</NavLink>
-                </li>
-                <li className="item">
-                    <NavLink to="/settings">Settings</NavLink>
-                </li>
-            </ul>
+            <div className="menu">
+                <div className="item">
+                    <NavLink to="/profile"><p>Profile</p></NavLink>
+                </div>
+                <div className="item">
+                    <NavLink to="/dialogs"><p>Messages</p></NavLink>
+                </div>
+                <div className="item">
+                    <NavLink to="/news"><p>News</p></NavLink>
+                </div>
+                <div className="item">
+                    <NavLink to="/music"><p>Music</p></NavLink>
+                </div>
+                <div className="item">
+                    <NavLink to="/settings"><p>Settings</p></NavLink>
+                </div>
+            </div>
         </nav>
     )
 }

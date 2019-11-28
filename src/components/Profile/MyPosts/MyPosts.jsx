@@ -2,7 +2,16 @@ import React from 'react';
 import './MyPosts.scss';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = props => {
+
+    // let posts = [
+    //     { likesCount: 13, message: 'Hi, how R U?' },
+    //     { likesCount: 15, message: 'It\'s my first post' }
+    // ]
+
+    let postsElements =
+        props.posts.map(p => <Post message={p.message} likes={p.likesCount} />)
+
     return (
         <div className="posts">
             My posts
@@ -16,8 +25,9 @@ const MyPosts = () => {
                 <button>Remove</button>
             </div>
             <ul className="list post">
-                <Post message="Hi, how R U?" likes="15" />
-                <Post message="It's my first post" likes="20" />
+
+                {postsElements}
+
             </ul>
         </div>
     )
